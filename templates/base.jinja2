@@ -3,8 +3,14 @@
 <title>Mailroom</title>
 </head>
 <body>
-	<h1>My Donations</h1>
-	<h2>{% block subtitle %} {% endblock subtitle %}</h2>
-	{% block content %} {% endblock content %}
+    <nav>
+        <a id='all_donations' href="{{ url_for('all_donations') }}">List Donations</a> |
+        <a id='donors' href="{{ url_for('all_donors') }}">List Donors</a> |
+        <a id='create' href="{{ url_for('create') }}">Record Donation</a>
+    </nav>
+
+    <h1>KEXP Donations Management</h1>
+    <h2>{% block subtitle %} {% endblock subtitle %}</h2>
+    {% block content %} {% endblock content %}
 </body>
 </html>
